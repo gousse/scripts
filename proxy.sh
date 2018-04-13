@@ -22,11 +22,6 @@ unset_proxy(){
 
 set_proxy
 
-
-# declare proxy 
-echo "# patching for ansible"
-envsubst < $DIR/../ansible/group_vars/all.template >  $DIR/../ansible/group_vars/all
-
 echo "# patching proxy for apt"
 sudo -E bash -c "envsubst < $DIR/apt_proxy.template > /etc/apt/apt.conf.d/apt_proxy"
 

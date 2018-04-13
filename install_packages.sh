@@ -8,5 +8,5 @@ sudo -E apt-get install -y \
   jq \
   netcat-traditional \
   vim \
-  rxvt-unicode-256 \
+  rxvt-unicode-256color \
   i3

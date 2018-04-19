@@ -8,12 +8,12 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # install apt packages
 bash $DIR/install_packages.sh
 
-# install ansible
 bash $DIR/install_ansible.sh
 
-# install kubectl
 bash $DIR/install_kubectl.sh
 
-# install docker
 bash $DIR/install_docker.sh
 
+bash $DIR/install_urxvt.sh
+
+bash $DIR/install_go.sh

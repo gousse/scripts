@@ -2,6 +2,8 @@
 # set proxy and declare where its needed
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Edit proxy_ip and port
+# if you declare empty proxy_ip, it will desactivate proxy setting
 export PROXY_IP=''
 #export PROXY_IP=1.2.3.4
 export PROXY_PORT=3128

@@ -6,7 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 sudo echo -n "" >/dev/null
 
 # manage proxy settings
-source proxy.sh
+source $DIR/proxy.sh
 
 # install apt packages
 bash $DIR/install_packages.sh

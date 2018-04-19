@@ -22,3 +22,5 @@ bash $DIR/install_urxvt.sh
 bash $DIR/install_go.sh
 
 bash $DIR/install_powerline-go.sh
+
+bash $DIR/install_i3.sh

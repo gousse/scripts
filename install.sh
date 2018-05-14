@@ -8,19 +8,13 @@ sudo echo -n "" >/dev/null
 # manage proxy settings
 source $DIR/proxy.sh
 
-# install apt packages
+# installs
 bash $DIR/install_packages.sh
-
 bash $DIR/install_ansible.sh
-
 bash $DIR/install_kubectl.sh
-
 bash $DIR/install_docker.sh
-
 bash $DIR/install_urxvt.sh
-
 bash $DIR/install_go.sh
-
 bash $DIR/install_powerline-go.sh
-
 bash $DIR/install_i3.sh
+bash $DIR/install_atom.sh

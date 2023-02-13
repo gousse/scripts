@@ -24,6 +24,16 @@ install_quickstart (){
   fi
 }
 
+install_func () {
+  cd $DIR
+  curl -L https://github.com/knative/func/releases/download/knative-$VERSION/func_linux_amd64 -o func
+   if [ $? -eq 0 ]; then
+     chmod 755 $DIR/func
+     sudo mv $DIR/func usr/local/bin/
+     sudo ln -s /usr/local/bin/func /usr/local/bin/kn-func
+  fi
+}
+
 echo "# install kn CLI"
 if [ -f /usr/local/bin/kn ]
 then
@@ -54,4 +64,20 @@ then
   fi
 else
   install_quickstart
+fi
+
+echo "# install func"
+if [ -f /usr/local/bin/func ]
+then
+  echo "/usr/local/bin/func is present"
+  version=$(func version)
+  latest_version=${VERSION} # to do
+  if [ "${version}" == "${latest_version}" ]; then
+    echo "func is version ${version}"
+  else
+    echo "upgrading func"
+    install_func
+  fi
+else
+  install_func
 fi

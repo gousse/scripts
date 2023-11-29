@@ -2,7 +2,7 @@
 #
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-VERSION="v0.27.3"
+VERSION="v0.28.2"
 PLATEFORM="Linux_amd64"
 
 install_k9s (){
@@ -19,7 +19,7 @@ echo "# install k9s"
 if [ -f /usr/local/bin/k9s ]
 then
   echo "/usr/local/bin/k9s is present"
-  version=$(k9s version -o json | jq -r .Version)
+  version=$(k9s version -s |grep -o 'v[0-9]\+\.[0-9]\+\.[0-9]\+')
   latest_version=${VERSION} # to do
   if [ "${version}" == "${latest_version}" ]; then
     echo "k9s is version ${version}"
